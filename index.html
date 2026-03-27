@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Books library</title>
+</head>
+<body>
+    <header>
+        <h1>Books library</h1>
+    </header>
+
+
+    <button popovertarget="my-dialog" class="btn">New book</button>
+
+    <dialog id="my-dialog" popover>
+            
+        <form method="dialog">
+            <div class="row mb-3">
+
+                <div class="col-sm-10">
+                    <label for="name" class="form-label">Book name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Atomic Habits" value="" required>
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+
+                <div class="col-sm-10">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" placeholder="" value="" required>
+                </div>
+
+                <div class="col-sm-10">
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" placeholder="" value="" required>
+                </div>
+
+            </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn primary">Add book</button>
+                    <button popovertarget="my-dialog" popovertargetaction="hide" class="btn secondary">Close</button>
+                </div>
+
+            </div>
+        </form>
+
+    </dialog>
+
+    <script src="main.js"></script>
+</body>
+</html>
